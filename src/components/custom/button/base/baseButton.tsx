@@ -54,7 +54,7 @@ const getVariantStyles = (colorType: variantColorType): VariantColorStyle => {
 };
 
 const getVariantFromStatus = (
-  status?: string,
+  status?: string
 ): variantColorType | undefined => {
   switch (status) {
     case "active":
@@ -80,21 +80,26 @@ export const BaseButton: FC<ButtonBaseProps> = ({
     : colorType || "none";
 
   const { bg, gradient, hover, textColor } = getVariantStyles(
-    resolvedVariant || "none",
+    resolvedVariant || "none"
   );
 
   const animationMap: Record<string, string> = {
-    fade: `${keyframes.shakeX} 1s ease-out infinite`,
+    fade: `${keyframes.fade} 1s ease-out infinite`,
   };
 
   return (
     <Button
       bg={withGradient ? gradient : (bg ?? "none")}
       color={textColor}
-      fontSize={{ base: "14px", md: "16px" }}
-      _hover={{ background: withGradient ? hover : `${bg}CC` }}
+      fontSize={{ base: "16px", md: "18px" }}
+      _hover={{
+        background: withGradient ? hover : `${bg}CC`,
+        animation: animation ? animationMap[animation] : undefined,
+        animationDelay: "0.2s",
+      }}
       _active={{ background: withGradient ? hover : `${bg}AA` }}
       _disabled={{ background: "gray.300", cursor: "not-allowed" }}
+      borderRadius={"7px"}
       loading={isLoading}
       loadingText={"wait..."}
       spinnerPlacement={"end"}

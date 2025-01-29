@@ -23,6 +23,19 @@ export const keyframes = {
     "50%": { transform: "scaleY(1.5)" },
     "100%": { transform: "scaleY(1)" },
   },
+
+  // Text animation typings
+  textTypings: {
+    "0%": { "clip-path": "inset(0 100% 0 0)" },
+    "50%": { "clip-path": "inset(0 0% 0 0)" },
+    "80%": { "clip-path": "inset(0 0% 0 0)" },
+    "100%": { "clip-path": "inset(0 100% 0 0)" },
+  },
+
+  // Cusors blink animation
+  blinkCursor: {
+    "50% ": { opacity: "0" },
+  },
 };
 
 export const animations = {
@@ -30,4 +43,6 @@ export const animations = {
   fade: { value: "fade 1s ease-in-out infinite" },
   dotBounce: { value: "dotBounce 0.6s ease-in-out infinite" },
   barPulse: { value: "barPulse 0.6s ease-in-out infinite" },
+  textTypings: { value: "textTypings 5s steps(20) infinite" },
+  blinkCursor: { value: "blinkCursor 0.7s steps(1, end) infinite" },
 };
