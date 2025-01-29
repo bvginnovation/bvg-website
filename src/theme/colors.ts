@@ -1,9 +1,26 @@
 export const colors = {
-  brand: {
-    50: { value: "#e6f2ff" },
-    100: { value: "#e6f2ff" },
-    200: { value: "#bfdeff" },
-    300: { value: "#99caff" },
-    950: { value: "#001a33" },
+  primary: {
+    50: { value: "#ebebff" },
+    100: { value: "#c5c6f1" },
+    200: { value: "#9e9fe1" },
+    300: { value: "#7979d3" },
+    400: { value: "#DBDCFF" },
+    500: { value: "#1A3C8A" },
+    600: { value: "#2c2d87" },
+    700: { value: "#1f2062" },
+    800: { value: "#11123c" },
+    900: { value: "#0C1043" },
+  },
+  secondary: {
+    50: { value: "#fff1da" },
+    100: { value: "#ffd8ae" },
+    200: { value: "#ffbf7d" },
+    300: { value: "#ffa64c" },
+    400: { value: "#ff8c1a" },
+    500: { value: "#F6A724" },
+    600: { value: "#b45900" },
+    700: { value: "#813f00" },
+    800: { value: "#4f2500" },
+    900: { value: "#200b00" },
   },
 };
