@@ -13,7 +13,7 @@ export const keyframes = {
 
   // Dot Bounce Animation
   dotBounce: {
-    "0%, '80%',100%": { transform: "scale(1)" },
+    "0%, 80%, 100%": { transform: "scale(1)" }, // Correction de la virgule
     "40%": { transform: "scale(1.5)" },
   },
 
@@ -24,17 +24,22 @@ export const keyframes = {
     "100%": { transform: "scaleY(1)" },
   },
 
-  // Text animation typings
+  // Text animation typings (Correction : clip-path → clipPath)
   textTypings: {
-    "0%": { "clip-path": "inset(0 100% 0 0)" },
-    "50%": { "clip-path": "inset(0 0% 0 0)" },
-    "80%": { "clip-path": "inset(0 0% 0 0)" },
-    "100%": { "clip-path": "inset(0 100% 0 0)" },
+    "0%": { clipPath: "inset(0 100% 0 0)" },
+    "50%": { clipPath: "inset(0 0% 0 0)" },
+    "80%": { clipPath: "inset(0 0% 0 0)" },
+    "100%": { clipPath: "inset(0 100% 0 0)" },
   },
 
-  // Cusors blink animation
+  // Cursor blink animation
   blinkCursor: {
-    "50% ": { opacity: "0" },
+    "50%": { opacity: "0" }, // Suppression de l'espace après "50%"
+  },
+
+  slidesHorizontaleScale: {
+    "0%": { transform: "translateX(100%)" },
+    "100%": { transform: "translateX(-100%)" },
   },
 
   slidesHorizontaleScale: {

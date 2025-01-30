@@ -1,0 +1,100 @@
+<svg viewBox="0 0 198 172" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_1_1071)">
+<g clip-path="url(#clip1_1_1071)">
+<circle cx="8" cy="8" r="8"/>
+<circle cx="34" cy="8" r="8"/>
+<circle cx="60" cy="8" r="8"/>
+<circle cx="86" cy="8" r="8"/>
+<circle cx="112" cy="8" r="8"/>
+<circle cx="138" cy="8" r="8"/>
+<circle cx="164" cy="8" r="8"/>
+<circle cx="190" cy="8" r="8"/>
+</g>
+<g clip-path="url(#clip2_1_1071)">
+<circle cx="8" cy="34" r="8"/>
+<circle cx="34" cy="34" r="8"/>
+<circle cx="60" cy="34" r="8"/>
+<circle cx="86" cy="34" r="8"/>
+<circle cx="112" cy="34" r="8"/>
+<circle cx="138" cy="34" r="8"/>
+<circle cx="164" cy="34" r="8"/>
+<circle cx="190" cy="34" r="8"/>
+</g>
+<g clip-path="url(#clip3_1_1071)">
+<circle cx="8" cy="60" r="8"/>
+<circle cx="34" cy="60" r="8"/>
+<circle cx="60" cy="60" r="8"/>
+<circle cx="86" cy="60" r="8"/>
+<circle cx="112" cy="60" r="8"/>
+<circle cx="138" cy="60" r="8"/>
+<circle cx="164" cy="60" r="8"/>
+<circle cx="190" cy="60" r="8"/>
+</g>
+<g clip-path="url(#clip4_1_1071)">
+<circle cx="8" cy="86" r="8"/>
+<circle cx="34" cy="86" r="8"/>
+<circle cx="60" cy="86" r="8"/>
+<circle cx="86" cy="86" r="8"/>
+<circle cx="112" cy="86" r="8"/>
+<circle cx="138" cy="86" r="8"/>
+<circle cx="164" cy="86" r="8"/>
+<circle cx="190" cy="86" r="8"/>
+</g>
+<g clip-path="url(#clip5_1_1071)">
+<circle cx="8" cy="112" r="8"/>
+<circle cx="34" cy="112" r="8"/>
+<circle cx="60" cy="112" r="8"/>
+<circle cx="86" cy="112" r="8"/>
+<circle cx="112" cy="112" r="8"/>
+<circle cx="138" cy="112" r="8"/>
+<circle cx="164" cy="112" r="8"/>
+<circle cx="190" cy="112" r="8"/>
+</g>
+<g clip-path="url(#clip6_1_1071)">
+<circle cx="8" cy="138" r="8"/>
+<circle cx="34" cy="138" r="8"/>
+<circle cx="60" cy="138" r="8"/>
+<circle cx="86" cy="138" r="8"/>
+<circle cx="112" cy="138" r="8"/>
+<circle cx="138" cy="138" r="8"/>
+<circle cx="164" cy="138" r="8"/>
+<circle cx="190" cy="138" r="8"/>
+</g>
+<g clip-path="url(#clip7_1_1071)">
+<circle cx="8" cy="164" r="8"/>
+<circle cx="34" cy="164" r="8"/>
+<circle cx="60" cy="164" r="8"/>
+<circle cx="86" cy="164" r="8"/>
+<circle cx="112" cy="164" r="8"/>
+<circle cx="138" cy="164" r="8"/>
+<circle cx="164" cy="164" r="8"/>
+<circle cx="190" cy="164" r="8"/>
+</g>
+</g>
+<defs>
+<clipPath id="clip0_1_1071">
+<rect width="198" height="172" fill="white"/>
+</clipPath>
+<clipPath id="clip1_1_1071">
+<rect width="198" height="16" fill="white"/>
+</clipPath>
+<clipPath id="clip2_1_1071">
+<rect width="198" height="16" fill="white" transform="translate(0 26)"/>
+</clipPath>
+<clipPath id="clip3_1_1071">
+<rect width="198" height="16" fill="white" transform="translate(0 52)"/>
+</clipPath>
+<clipPath id="clip4_1_1071">
+<rect width="198" height="16" fill="white" transform="translate(0 78)"/>
+</clipPath>
+<clipPath id="clip5_1_1071">
+<rect width="198" height="16" fill="white" transform="translate(0 104)"/>
+</clipPath>
+<clipPath id="clip6_1_1071">
+<rect width="198" height="16" fill="white" transform="translate(0 130)"/>
+</clipPath>
+<clipPath id="clip7_1_1071">
+<rect width="198" height="16" fill="white" transform="translate(0 156)"/>
+</clipPath>
+</defs>
+</svg>

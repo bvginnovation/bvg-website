@@ -3,6 +3,7 @@ import { Poppins } from "next/font/google";
 import { Provider } from "_/components/ui/provider";
 import "./globals.css";
 import { ColorModeProvider } from "_components/ui/color-mode";
+import { Toaster } from "_components/ui/toaster";
 
 const poppins = Poppins({
   weight: ["400", "900"],
@@ -25,6 +26,7 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body className={`${poppins.variable}`}>
         <Provider>
+          <Toaster />
           <ColorModeProvider>{children}</ColorModeProvider>
         </Provider>
       </body>
