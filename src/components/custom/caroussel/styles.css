@@ -7,6 +7,7 @@ body {
   height: 100%;
 }
 
+<<<<<<< HEAD
 body {
   background: #eee;
   font-family:
@@ -20,6 +21,8 @@ body {
   padding: 0;
 }
 
+=======
+>>>>>>> a559b77 (feat: 🎸 [home] integrate home feature)
 .swiper {
   width: 100%;
   padding-top: 50px;
@@ -28,6 +31,7 @@ body {
 
 .swiper-slide {
   background-position: center;
+<<<<<<< HEAD
   background-size: cover;
   width: 300px;
   height: 300px;
@@ -36,4 +40,9 @@ body {
 .swiper-slide img {
   display: block;
   width: 100%;
+=======
+  background-size: contain;
+  align-items: center;
+  justify-items: center;
+>>>>>>> a559b77 (feat: 🎸 [home] integrate home feature)
 }

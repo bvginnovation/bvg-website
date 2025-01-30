@@ -2,6 +2,7 @@
 
 import {
   Box,
+  Button,
   Center,
   Flex,
   For,
@@ -19,6 +20,13 @@ import { GiHamburgerMenu } from "react-icons/gi";
 import { ColorModeButton } from "_/components/ui/color-mode";
 import MobileMenu from "./MobileMenu";
 import { ImageBackgroundComponent } from "./ImageBackgroundComponent";
+import {
+  MenuRoot,
+  MenuContent,
+  MenuItem,
+  MenuTrigger,
+  MenuTriggerItem,
+} from "_/components/ui/menu";
 
 export const Hero = () => {
   const [open, setOpen] = useState(false);
@@ -29,18 +37,20 @@ export const Hero = () => {
 
   const fakeLink = [
     { text: "Accueil", link: "" },
-    { text: "Nos Services", link: "" },
+    { text: "Services", link: "" },
     { text: "Produit", link: "" },
-    { text: "Equipe", link: "" },
-    { text: "Blog", link: "" },
-    { text: "A propos", link: "" },
+    {
+      text: "Societé",
+      link: "",
+      subMenu: ["Equipe", "A propos"],
+    },
     { text: "Contact", link: "" },
   ];
 
   return (
     <ImageBackgroundComponent
       imgSrc={"assets/images/home.png"}
-      height={"100vh" }
+      height={"100vh"}
       color={"overlay"}
       opacity={0.72}
     >

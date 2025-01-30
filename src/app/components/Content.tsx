@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 import { Box, Heading, Center, Text, Flex, VStack } from "@chakra-ui/react";
+=======
+import { Box, Heading, Center, Text } from "@chakra-ui/react";
+>>>>>>> a559b77 (feat: 🎸 [home] integrate home feature)
 import React from "react";
 import Image from "next/image";
 import { BaseButton } from "_components/custom/button";
@@ -9,12 +13,20 @@ export const Content = ({
   imageSrc,
   buttonTitle,
   showButton = false,
+<<<<<<< HEAD
+=======
+  bgColor = "primary.500",
+>>>>>>> a559b77 (feat: 🎸 [home] integrate home feature)
 }: {
   content: string;
   title: string;
   imageSrc: string;
   buttonTitle?: string;
   showButton?: boolean;
+<<<<<<< HEAD
+=======
+  bgColor?: string;
+>>>>>>> a559b77 (feat: 🎸 [home] integrate home feature)
 }) => {
   return (
     <Box
@@ -47,7 +59,13 @@ export const Content = ({
           </Text>
           {showButton && (
             <BaseButton
+<<<<<<< HEAD
               colorType={"primary"}
+=======
+              bgColor={bgColor}
+              color={bgColor === "white" ? "primary.500" : "white"}
+              shadow={"lg"}
+>>>>>>> a559b77 (feat: 🎸 [home] integrate home feature)
               mt={"20px"}
               mb={"20px"}
               p={{ base: "25px", md: "30px" }}

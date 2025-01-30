@@ -8,8 +8,13 @@ import Image from "next/image";
 interface Props extends CardRootProps {
   title: string;
   content?: any;
+<<<<<<< HEAD
   isList: boolean;
   listItem: { value: string }[];
+=======
+  isList?: boolean;
+  listItem?: { value: string }[];
+>>>>>>> a559b77 (feat: 🎸 [home] integrate home feature)
   showButton?: boolean;
   imgSrc: string | undefined;
 }
@@ -18,9 +23,15 @@ export const BaseCard: FC<Props> = ({
   content,
   title,
   showButton = false,
+<<<<<<< HEAD
   listItem,
   imgSrc = "",
   isList,
+=======
+  listItem = [],
+  imgSrc = "",
+  isList = false,
+>>>>>>> a559b77 (feat: 🎸 [home] integrate home feature)
   ...rest
 }) => {
   return (
