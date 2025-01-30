@@ -7,6 +7,7 @@ import {
 } from "../interface/button";
 import { keyframes } from "_/theme/animations";
 import { LoadingDots } from "../animation/loadingDots";
+import { HStack } from "@chakra-ui/react";
 
 const getVariantStyles = (colorType: variantColorType): VariantColorStyle => {
   switch (colorType) {
@@ -69,6 +70,7 @@ const getVariantFromStatus = (
 export const BaseButton: FC<ButtonBaseProps> = ({
   children,
   withGradient = false,
+  rightIcon,
   colorType,
   status,
   animation,
@@ -88,26 +90,55 @@ export const BaseButton: FC<ButtonBaseProps> = ({
   };
 
   return (
-    <Button
-      bg={withGradient ? gradient : (bg ?? "none")}
-      color={textColor}
-      fontSize={{ base: "16px", md: "18px" }}
-      _hover={{
-        background: withGradient ? hover : `${bg}CC`,
-        animation: animation ? animationMap[animation] : undefined,
-        animationDelay: "0.2s",
-      }}
-      _active={{ background: withGradient ? hover : `${bg}AA` }}
-      _disabled={{ background: "gray.300", cursor: "not-allowed" }}
-      borderRadius={"7px"}
-      loading={isLoading}
-      loadingText={"wait..."}
-      spinnerPlacement={"end"}
-      spinner={<LoadingDots />}
-      animation={animation ? animationMap[animation] : undefined}
-      {...rest}
-    >
-      {children}
-    </Button>
+    <>
+      {!rightIcon ? (
+        <Button
+          bg={withGradient ? gradient : (bg ?? "none")}
+          color={textColor}
+          fontSize={{ base: "16px", md: "18px" }}
+          _hover={{
+            background: withGradient ? hover : `${bg}CC`,
+            animation: animation ? animationMap[animation] : undefined,
+            animationDelay: "0.2s",
+          }}
+          _active={{ background: withGradient ? hover : `${bg}AA` }}
+          _disabled={{ background: "gray.300", cursor: "not-allowed" }}
+          borderRadius={"7px"}
+          loading={isLoading}
+          loadingText={"wait..."}
+          spinnerPlacement={"end"}
+          spinner={<LoadingDots />}
+          animation={animation ? animationMap[animation] : undefined}
+          {...rest}
+        >
+          {children}
+        </Button>
+      ) : (
+        <HStack>
+          <Button
+            bg={withGradient ? gradient : (bg ?? "none")}
+            color={textColor}
+            fontSize={{ base: "16px", md: "18px" }}
+            _hover={{
+              background: withGradient ? hover : `${bg}CC`,
+              animation: animation ? animationMap[animation] : undefined,
+              animationDelay: "0.2s",
+            }}
+            _active={{ background: withGradient ? hover : `${bg}AA` }}
+            _disabled={{ background: "gray.300", cursor: "not-allowed" }}
+            borderRadius={"7px"}
+            loading={isLoading}
+            loadingText={"wait..."}
+            spinnerPlacement={"end"}
+            spinner={<LoadingDots />}
+            animation={animation ? animationMap[animation] : undefined}
+            {...rest}
+          >
+            {children}
+            {rightIcon}
+          </Button>
+        </HStack>
+      )}
+    </>
   );
 };
