@@ -46,6 +46,11 @@ export const keyframes = {
     "0%": { transform: "translateX(100%)" },
     "100%": { transform: "translateX(-100%)" },
   },
+
+  slidesHorizontaleScale: {
+    "0%": { transform: "translateX(100%)" },
+    "100%": { transform: "translateX(-100%)" },
+  },
 };
 
 export const animations = {

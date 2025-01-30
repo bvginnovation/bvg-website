@@ -44,6 +44,9 @@ const nextConfig: NextConfig = {
   typescript: {
     ignoreBuildErrors: true, // Disables TypeScript type checking during build
   },
+  images: {
+    domains: ["swiperjs.com", "images.unsplash.com"],
+  },
 };
 
 export default nextConfig;
