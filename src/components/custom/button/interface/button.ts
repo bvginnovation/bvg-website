@@ -1,5 +1,5 @@
 import { ButtonProps } from "@chakra-ui/react";
-import React from "react";
+import React, { ReactNode } from "react";
 
 export type variantColorType =
   | "primary"
@@ -32,4 +32,5 @@ export interface ButtonBaseProps extends ButtonProps {
   status?: string;
   animation?: animationType;
   isLoading?: boolean;
+  rightIcon?: ReactNode;
 }

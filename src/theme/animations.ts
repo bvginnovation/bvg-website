@@ -36,6 +36,11 @@ export const keyframes = {
   blinkCursor: {
     "50% ": { opacity: "0" },
   },
+
+  slidesHorizontaleScale: {
+    "0%": { transform: "translateX(100%)" },
+    "100%": { transform: "translateX(-100%)" },
+  },
 };
 
 export const animations = {
@@ -45,4 +50,7 @@ export const animations = {
   barPulse: { value: "barPulse 0.6s ease-in-out infinite" },
   textTypings: { value: "textTypings 5s steps(20) infinite" },
   blinkCursor: { value: "blinkCursor 0.7s steps(1, end) infinite" },
+  slidesHorizontaleScale: {
+    value: "slidesHorizontaleScale 30s linear infinite",
+  },
 };
