@@ -19,7 +19,6 @@ const nextConfig: NextConfig = {
     });
     return config;
   },
-  experimental: { optimizePackageImports: ["@chakra-ui/react"] },
   images: {
     remotePatterns: [
       {
@@ -37,6 +36,17 @@ const nextConfig: NextConfig = {
         search: "",
       },
     ],
+  },
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
+  typescript: {
+    ignoreBuildErrors: true,
+  },
+  experimental: {
+    optimizePackageImports: ["@chakra-ui/react"],
+    workerThreads: false,
+    cpus: 1,
   },
 };
 

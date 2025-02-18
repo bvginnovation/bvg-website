@@ -21,10 +21,7 @@ const FormTextArea: FC<FormTextAreaProps> = ({
   isDisabled,
   validate,
 }) => {
-  const fieldHookConfig = {
-    name,
-    validate,
-  };
+  const fieldHookConfig = { name, validate };
 
   const [field, { touched, error }] = useField(fieldHookConfig);
   const isError = isReadOnly ? !!error : !!(touched && error);
@@ -56,7 +53,7 @@ const FormTextArea: FC<FormTextAreaProps> = ({
         onBlur={(e) => {
           field.onBlur(e);
         }}
-        _placeholder={{ color: isError ? "red.500" : "black" }}
+        _placeholder={{ color: isError ? "red.500" : "gray.300" }}
       />
       {isError && <Field.ErrorText>{error}</Field.ErrorText>}
       {localErrorMsg && (

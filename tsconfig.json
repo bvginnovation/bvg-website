@@ -13,14 +13,11 @@
     "isolatedModules": true,
     "jsx": "preserve",
     "incremental": true,
-    "plugins": [
-      {
-        "name": "next"
-      }
-    ],
+    "plugins": [{ "name": "next" }],
     "paths": {
       "_/*": ["./src/*"],
       "_app/*": ["./src/app/*"],
+      "_assets/*": ["./public/assets/*"],
       "_theme/*": ["./src/theme/*"],
       "_components/*": ["./src/components/*"]
     }
