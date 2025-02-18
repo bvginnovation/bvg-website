@@ -1,4 +1,4 @@
-import { Box, SimpleGrid, Center, Heading } from "@chakra-ui/react";
+import { Box, SimpleGrid, Center, Heading, For } from "@chakra-ui/react";
 import React from "react";
 import { ImageBackgroundComponent } from "./ImageBackgroundComponent";
 import { BaseCard } from "_components/custom/card";
@@ -122,17 +122,19 @@ export const OurServices = () => {
 
       <Center p={8} mt={10}>
         <SimpleGrid columns={{ base: 1, sm: 1, md: 2, lg: 3 }} gap="40px">
-          {listItem.map((item, index) => (
-            <BaseCard
-              shadow={"xs"}
-              key={index}
-              title={item.key}
-              isList
-              listItem={item.value.map((val) => ({ value: val }))}
-              showButton={false}
-              imgSrc={item.img}
-            />
-          ))}
+          <For each={listItem}>
+            {(item, index) => (
+              <BaseCard
+                shadow={"xs"}
+                key={index}
+                title={item.key}
+                isList
+                listItem={item?.value?.map((val) => ({ value: val }))}
+                showButton={false}
+                imgSrc={item.img}
+              />
+            )}
+          </For>
         </SimpleGrid>
       </Center>
     </Box>

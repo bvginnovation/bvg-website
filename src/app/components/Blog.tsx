@@ -1,4 +1,4 @@
-import { Box, Center, Flex, SimpleGrid, Text } from "@chakra-ui/react";
+import { Box, Center, Flex, For, SimpleGrid, Text } from "@chakra-ui/react";
 import React from "react";
 import { ImageBackgroundComponent } from "./ImageBackgroundComponent";
 import { BaseCard } from "_/components/custom/card";
@@ -44,16 +44,18 @@ export const Blog = () => {
             <DotIcon fill={Colors.secondary} width={200} height={200} />
           </Flex>
           <SimpleGrid columns={{ base: 1, sm: 1, md: 2, lg: 3 }} gap="40px">
-            {listItem.map((item, index) => (
-              <BaseCard
-                shadow={"sm"}
-                key={index}
-                title={item.key}
-                content={item.content}
-                showButton
-                imgSrc={item.img}
-              />
-            ))}
+            <For each={listItem}>
+              {(item, index) => (
+                <BaseCard
+                  shadow={"sm"}
+                  key={index}
+                  title={item.key}
+                  content={item.content}
+                  showButton
+                  imgSrc={item.img}
+                />
+              )}
+            </For>
           </SimpleGrid>
           <Flex
             mt={"20px"}

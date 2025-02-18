@@ -15,21 +15,11 @@ const nextConfig: NextConfig = {
     }
     config.module?.rules?.push({
       test: /\.svg$/,
-      use: [
-        {
-          loader: "@svgr/webpack",
-          options: {
-            svgo: false,
-            icon: true,
-          },
-        },
-      ],
+      use: [{ loader: "@svgr/webpack", options: { svgo: false, icon: true } }],
     });
     return config;
   },
-  experimental: {
-    optimizePackageImports: ["@chakra-ui/react"],
-  },
+  experimental: { optimizePackageImports: ["@chakra-ui/react"] },
   images: {
     remotePatterns: [
       {

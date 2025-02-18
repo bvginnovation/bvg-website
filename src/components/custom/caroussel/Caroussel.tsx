@@ -1,4 +1,4 @@
-import { Box, Center, List, Text } from "@chakra-ui/react";
+import { Box, Center, For, List, Text } from "@chakra-ui/react";
 import React, { useState } from "react";
 import Image from "next/image";
 import { Autoplay, EffectCoverflow } from "swiper/modules";
@@ -30,10 +30,7 @@ export const Caroussel = ({
         centeredSlides={true}
         slidesPerView={4}
         spaceBetween={isMobile ? 20 : 0}
-        autoplay={{
-          delay: 2500,
-          disableOnInteraction: false,
-        }}
+        autoplay={{ delay: 2500, disableOnInteraction: false }}
         modules={[Autoplay]}
         onSlideChange={(swiper) => setActiveIndex(swiper.activeIndex)} // Mise à jour dynamique
         className="mySwiper"
@@ -61,7 +58,7 @@ export const Caroussel = ({
             fontWeight="semibold"
             fontSize={{ base: "xs", md: "20px" }}
           >
-            {items[activeIndex]?.roles.map((role, i) => (
+            {items[activeIndex]?.roles?.map((role, i) => (
               <List.Item
                 key={i}
                 _marker={{ color: i === 0 ? "primary.500" : "secondary.500" }}

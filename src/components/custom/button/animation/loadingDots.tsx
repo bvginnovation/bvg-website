@@ -5,7 +5,7 @@ export const LoadingDots = ({ color = "white" }: { color?: string }) => {
   const animation = `${keyframes.dotBounce} 1.4s infinite`;
   return (
     <Flex alignItems={"center"} justifyContent={"center"} gap={"5px"}>
-      {[...Array(3)].map((_, i) => (
+      {[...Array?.from({ length: 3 })]?.map((_, i) => (
         <Box
           key={i}
           animation={animation}

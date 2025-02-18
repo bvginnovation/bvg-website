@@ -1,5 +1,5 @@
-import { NextResponse } from 'next/server';
-import nodemailer from 'nodemailer';
+import { NextResponse } from "next/server";
+import nodemailer from "nodemailer";
 
 export async function POST(req: Request) {
   try {
@@ -7,19 +7,19 @@ export async function POST(req: Request) {
     const userInfoMessage = userInfo
       ? `
       Informations utilisateur :
-      - Nom de l'école : ${userInfo.schoolName || 'Non fourni'}
-      - Type de rôle : ${userInfo.roleType || 'Non fourni'}
-      - Pays : ${userInfo.country || 'Non fourni'}
-      - Ville : ${userInfo.city || 'Non fourni'}
-      - Adresse : ${userInfo.address || 'Non fourni'}
+      - Nom de l'école : ${userInfo.schoolName || "Non fourni"}
+      - Type de rôle : ${userInfo.roleType || "Non fourni"}
+      - Pays : ${userInfo.country || "Non fourni"}
+      - Ville : ${userInfo.city || "Non fourni"}
+      - Adresse : ${userInfo.address || "Non fourni"}
       `
-      : 'Aucune information utilisateur fournie.';
+      : "Aucune information utilisateur fournie.";
 
     const transporter = nodemailer.createTransport({
-      service: 'gmail',
+      service: "gmail",
       auth: {
         user: process.env.NEXT_PUBLIC_GOOGLE_EMAIL,
-        pass: process.env.NEXT_PUBLIC_GOOGLE_PASSWORD,
+        pass: process.env.GOOGLE_PASSWORD,
       },
     });
     const mailOptions = {
@@ -36,7 +36,7 @@ export async function POST(req: Request) {
     await transporter.sendMail(mailOptions);
     return new NextResponse(JSON.stringify({ success: true }), { status: 200 });
   } catch (error) {
-    console.error('Error sending email:', error);
+    console.error("Error sending email:", error);
     return new NextResponse(JSON.stringify({ success: false }), {
       status: 500,
     });

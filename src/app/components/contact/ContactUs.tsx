@@ -4,7 +4,7 @@ import { ImageBackgroundComponent } from "../ImageBackgroundComponent";
 import ContactForm from "./ContactForm";
 import ContactWidget from "./ContactWidget";
 import {
-  DotIcon,
+  
   MailIcon,
   PhoneRingsIcon,
 } from "../../../../public/assets/svg";
