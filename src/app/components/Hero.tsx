@@ -37,7 +37,7 @@ export const Hero = () => {
 
   const fakeLink = [
     { text: "Accueil", link: "" },
-    { text: "Services", link: "" },
+    { text: "Services", link: "/service" },
     { text: "Produit", link: "" },
     {
       text: "Societé",
@@ -96,6 +96,7 @@ export const Hero = () => {
               <For each={fakeLink}>
                 {(item, index) => (
                   <Link
+                    href={item.link}
                     key={index}
                     position="relative"
                     fontSize="20px"
