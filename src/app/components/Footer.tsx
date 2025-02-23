@@ -9,8 +9,8 @@ import {
   For,
   MenuContent,
   MenuItem,
+  Image,
 } from "@chakra-ui/react";
-import Image from "next/image";
 import React from "react";
 import { MailIcon, PhoneRingsIcon, ArrowDownIcon } from "_assets/svg";
 import Link from "next/link";
@@ -31,7 +31,6 @@ export const Footer = () => {
       icon: <MailIcon fill={"#fff"} />,
       label: "contact.bgv.innovation@gmail.com",
     },
-    { icon: <BsGlobe />, label: "https://www.bvg-innovation.tech" },
   ];
 
   const renderShortcuts = [
@@ -39,8 +38,8 @@ export const Footer = () => {
     { text: "Services", link: "" },
     { text: "Produit", link: "" },
     { text: "Societé", link: "", subMenu: ["Equipe", "A propos"] },
-    { text: "Contact", link: "" },
   ];
+
   const socialLinks = [
     {
       icon: "/assets/images/Facebook.png",
@@ -60,29 +59,26 @@ export const Footer = () => {
   return (
     <Box w={"full"} mt={50}>
       <Flex bgColor={"primary.500"} width={"full"}>
-        <Box pos={"relative"} width={"25%"}>
-          <Image
-            src={"/assets/images/forme.png"}
-            alt="forme"
-            width={250}
-            height={100}
-          />
+        <Box
+          pos={"relative"}
+          width={{ base: "100%", mdOnly: "40%", lg: "30%" }}
+          display={responsiveMode === "mobile" ? "none" : "block"}
+        >
+          <Image src={"/assets/images/forme.png"} />
           <Center pos="absolute" inset={0} zIndex={1000} width={"full"}>
-            <Image
-              src={"/assets/images/bvg-icon.png"}
-              alt={"bvg-icon"}
-              width={responsiveMode === "web" ? 100 : 20}
-              height={responsiveMode === "web" ? 100 : 80}
-            />
+            <Box width={"60%"}>
+              <Image src={"/assets/images/bvg-icon-2.png"} alt={"bvg-icon"} />
+            </Box>
           </Center>
         </Box>
-        <Box position={"relative"} width={"full"} ml={10}>
-          <Center minH={"50vh"}>
+        <Box position={"relative"} width={"full"} ml={5}>
+          <Center h={"100%"} flexDir={"column"}>
             <Flex
               width={"full"}
               alignItems={"flex-start"}
+              gap={"30px"}
               justifyContent={"center"}
-              gap={30}
+              flexDir={{ base: "column", mdOnly: "row" }}
             >
               <Box width={"full"} color={"white"}>
                 <Text>Contact</Text>
@@ -98,15 +94,22 @@ export const Footer = () => {
                 </VStack>
               </Box>
               <Box width={"full"} color={"white"}>
-                <Text>Liens</Text>
-                <VStack gap={4} mt={8} alignItems={"flex-start"}>
+                <Text>Liens Raccourcis</Text>
+                <VStack
+                  flexDir={{ base: "row", md: "column" }}
+                  gap={4}
+                  mt={8}
+                  alignItems={"flex-start"}
+                >
                   <For each={renderShortcuts}>
                     {(item, index) =>
                       item.subMenu ? (
                         <Flex gap={5} width={"full"}>
                           <MenuRoot
                             key={index}
-                            positioning={{ placement: "right-end" }}
+                            positioning={{
+                              placement: "bottom",
+                            }}
                           >
                             <MenuTrigger asChild color="white">
                               <Flex alignItems={"center"} gap={2}>
@@ -133,29 +136,29 @@ export const Footer = () => {
                 </VStack>
               </Box>
             </Flex>
-          </Center>
-          <Box width={"full"}>
-            <Flex gap={"30px"}>
-              <For each={socialLinks}>
-                {(item, index) => (
-                  <Link key={index} href={item.link}>
-                    <Image
-                      src={item.icon}
-                      alt={"icon"}
-                      width={30}
-                      height={30}
-                      loading="lazy"
-                    />
-                  </Link>
-                )}
-              </For>
-            </Flex>
 
-            <Separator size="lg" mt={3} />
-            <Center mt={10} mb={5}>
-              <Text color={"white"}>Copyright @ 2025 BVG-INNOVATION </Text>
-            </Center>
-          </Box>
+            <Box width={"full"} mt={{ base: 10, md: 4 }}>
+              <Flex gap={"10px"}>
+                <For each={socialLinks}>
+                  {(item, index) => (
+                    <Link key={index} href={item.link}>
+                      <Image
+                        src={item.icon}
+                        alt={"icon"}
+                        width={30}
+                        height={30}
+                        loading="lazy"
+                      />
+                    </Link>
+                  )}
+                </For>
+              </Flex>
+              <Separator size="sm" mt={{ base: 6, md: 5 }} />
+              <Center mt={10} mb={{ base: 5, md: 0 }}>
+                <Text color={"white"}>Copyright @ 2025 BVG-INNOVATION </Text>
+              </Center>
+            </Box>
+          </Center>
         </Box>
       </Flex>
     </Box>

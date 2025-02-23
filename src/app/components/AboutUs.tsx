@@ -9,6 +9,7 @@ import {
   Text,
   For,
 } from "@chakra-ui/react";
+import { Blog } from "./Blog";
 
 export const AboutUs = () => {
   const stats = [
@@ -28,6 +29,7 @@ export const AboutUs = () => {
       >
         A propos de Nous
       </ImageBackgroundComponent>
+      <Blog />
       <Box
         p="30px"
         width="100%"

@@ -11,7 +11,9 @@ export const ImageBackgroundComponent = ({
   children,
 }: {
   imgSrc: string;
-  height: { base?: string | number; md?: string | number } | string;
+  height:
+    | { base?: string | number; md?: string | number; lg?: string }
+    | string;
   color: keyof Colors;
   opacity: number;
   isCenter?: boolean;

@@ -17,7 +17,7 @@ export const HowItWorks = () => {
       </ImageBackgroundComponent>
       <Content
         content={
-          "Nous croyons que chaque idée mérite d'être développée à son plein potentiel. Notre équipe d'experts en design, développement et consulting IT travaille en étroite collaboration avec vous pour transformer vos concepts en solutions remarquables. Nous écoutons attentivement vos besoins, analysons vos objectifs et utilisons notre expertise pour affiner et enrichir vos idées. Que ce soit pour créer une interface utilisateur intuitive, développer une application mobile innovante, ou offrir des conseils stratégiques en IT, notre mission est de rendre chaque aspect de votre projet meilleur, plus performant et visuellement captivant."
+          "Chaque idée a du potentiel. Notre équipe d'experts en design, développement et conseil IT vous aide à transformer vos concepts en solutions performantes. À l'écoute de vos besoins, nous affinons vos idées pour créer des interfaces intuitives, des applications innovantes ou des stratégies IT adaptées. Nous rendons votre projet plus efficace et captivant."
         }
         title={
           "Travaillez plus intelligemment avec un accès facile à toutes vos données."

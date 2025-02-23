@@ -25,7 +25,6 @@ const HomePage = () => {
       <HowItWorks />
       <OurServices />
       <Teams />
-      <Blog />
       <AboutUs />
       <OurMission />
       <OurValues />

@@ -45,7 +45,7 @@ const ContactWidget = ({
               >
                 {icon}
               </Flex>
-              <Text fontSize="17px" fontWeight="bold">
+              <Text fontSize="14px" fontWeight="extralight">
                 {value}
               </Text>
             </Flex>
@@ -64,7 +64,7 @@ const ContactWidget = ({
               >
                 {icon}
               </Flex>
-              <Text fontSize="17px" fontWeight="bold">
+              <Text fontSize="14px" fontWeight="extralight">
                 {value}
               </Text>
             </Flex>

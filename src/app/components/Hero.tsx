@@ -31,7 +31,10 @@ import { ArrowDownIcon } from "_assets/svg";
 
 export const Hero = () => {
   const [open, setOpen] = useState(false);
-  const responsiveMode = useBreakpointValue({ md: "web", base: "mobile" });
+  const responsiveMode = useBreakpointValue({
+    md: "web",
+    base: "mobile",
+  });
 
   const fakeLink = [
     { text: "Accueil", link: "" },
@@ -64,7 +67,7 @@ export const Hero = () => {
         >
           <Box mt={{ base: 6, md: 10 }} ml={{ base: 2, md: 5 }}>
             <Image
-              src={"/assets/images/bvg-icon.png"}
+              src={"/assets/images/bvg-icon-2.png"}
               alt={"bvg-icon"}
               width={responsiveMode === "web" ? 120 : 80}
               height={responsiveMode === "web" ? 120 : 80}

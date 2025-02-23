@@ -1,9 +1,9 @@
-import { Card, CardRootProps, Flex, For, List } from "@chakra-ui/react";
+import { Card, CardRootProps, Flex, For, List, Image } from "@chakra-ui/react";
 import React, { FC } from "react";
 import { BaseButton } from "../button";
 import { RiArrowRightLine } from "react-icons/ri";
-import { FaCode } from "react-icons/fa6";
-import Image from "next/image";
+import { FaCheck, FaCode } from "react-icons/fa6";
+//import Image from "next/image";
 
 interface Props extends CardRootProps {
   title: string;
@@ -25,12 +25,7 @@ export const BaseCard: FC<Props> = ({
 }) => {
   return (
     <Card.Root {...rest} rounded={"xl"} maxW="sm" overflow="hidden">
-      <Image
-        src={imgSrc}
-        alt="Green double couch with wooden legs"
-        width={500}
-        height={500}
-      />
+      <Image src={imgSrc} alt="Green double couch with wooden legs" />
       <Card.Body p={"20px"} gap="2">
         <Card.Title>{title}</Card.Title>
         {isList ? (

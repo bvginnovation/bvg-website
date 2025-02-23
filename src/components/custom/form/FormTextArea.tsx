@@ -43,6 +43,7 @@ const FormTextArea: FC<FormTextAreaProps> = ({
         height={height}
         p={3}
         borderRadius={"12px"}
+        fontSize={"16px"}
         value={value ?? field.value}
         bgColor={"white"}
         onChange={(event: never) => {

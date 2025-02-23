@@ -1,4 +1,4 @@
-import { Box, Heading, Center, Text } from "@chakra-ui/react";
+import { Box, Heading, Center, Text, Flex } from "@chakra-ui/react";
 import React from "react";
 import Image from "next/image";
 import { BaseButton } from "_components/custom/button";
@@ -25,23 +25,26 @@ export const Content = ({
       justifyContent={"center"}
       flexDir={"column"}
       mt={{ base: 10, md: 100 }}
+      width={"full"}
       gap={30}
     >
       <Heading size={{ base: "xl", md: "3xl" }} textAlign={{ base: "center" }}>
         {title}
       </Heading>
-      <Center
-        p={{ base: 5, md: 20 }}
+      <Flex
+        pr={10}
+        pl={10}
+        mt={10}
         flexDir={{ base: "column", md: "row" }}
         alignItems={"center"}
         justifyContent={"center"}
-        w={"full"}
         gap={"20px"}
+        width={"full"}
       >
         <Box width={"full"}>
           <Text
-            fontSize={{ base: "medium", md: "2xl" }}
-            textAlign={{ base: "center", md: "left" }}
+            fontSize={{ base: "14px", md: "18px" }}
+            textAlign={{ base: "center", md: "justify" }}
             lineHeight={2}
             fontWeight={"lighter"}
           >
@@ -60,14 +63,20 @@ export const Content = ({
             </BaseButton>
           )}
         </Box>
-        <Image
-          src={imageSrc}
-          alt="bvg-images"
-          width={500}
-          height={500}
-          priority
-        />
-      </Center>
+        <Flex
+          width={{ base: "100%", md: "1/2" }}
+          alignItems={"center"}
+          justifyContent={"center"}
+        >
+          <Image
+            src={imageSrc}
+            alt="bvg-images"
+            width={500}
+            height={500}
+            priority
+          />
+        </Flex>
+      </Flex>
     </Box>
   );
 };
